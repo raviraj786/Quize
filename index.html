@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="contnier">
+      <div class="screen action" id="start-screen">
+        <h1>Quiz Time!</h1>
+        <p>Test your Programing Knowlage</p>
+        <button id="start-button">start Quiz</button>
+      </div>
+
+      <div class="screen" id="quiz-screen">
+        <div id="quiz-header">
+          <h2>qutions write this</h2>
+          <div id="quiz-info">
+            <p>Qutions<span>2</span>of<span>5</span></p>
+            <p>Score:<span>0</span></p>
+          </div>
+        </div>
+        <div id="answere-container" class="answere-container">
+          <p id="ans">option1</p>
+          <p>option2</p>
+          <p>option3</p>
+          <p>option4</p>
+        </div>
+
+        <div class="progress-bar">
+          <div id="progress" class="progress"></div>
+        </div>
+      </div>
+
+      <div class="result-screen" id="result-screen">
+        <h1>Quiz Result</h1>
+        <div class="result-info">
+          <p cl>
+            You scored <span id="final-score">0</span>out of
+            <span id="max-score">5</span>
+          </p>
+          <p>Keep studying! You'|| get better</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
