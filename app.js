@@ -1,51 +1,54 @@
-const quizData = [
-  {
-    question: "What does HTML stand for?",
-    answers: [
-      { text: "Hyper Text Markup Language", option: true },
-      { text: "Hyperlinks Text Manage Logic", option: false },
-      { text: "Home Tool Markup Language", option: false },
-      { text: "Hyper Text Markup Languages", option: false },
-    ],
-  },
+// const quizData = [
+//   {
+//     question: "What does HTML stand for?",
+//     answers: [
+//       { text: "Hyper Text Markup Language", option: true },
+//       { text: "Hyperlinks Text Manage Logic", option: false },
+//       { text: "Home Tool Markup Language", option: false },
+//       { text: "Hyper Text Markup Languages", option: false },
+//     ],
+//   },
 
-  {
-    question: "Which CSS property changes text color?",
-    answers: [
-      { text: "font-size", option: false },
-      { text: "text-style", option: false },
-      { text: "color", option: true },
-      { text: "background", option: false },
-    ],
-  },
-  {
-    question: "Inside which HTML element do we put JavaScript?",
-    answers: [
-      { text: "<script>", option: true },
-      { text: "<js>", option: false },
-      { text: "<javascript>", option: false },
-      { text: "<code>", option: false },
-    ],
-  },
-  {
-    question: "Which symbol is used for comments in JavaScript?",
-    answers: [
-      { text: "//", option: true },
-      { text: "<!-- -->", option: true },
-      { text: "#", option: true },
-      { text: "/* */", option: true },
-    ],
-  },
-  {
-    question: "Which company developed JavaScript?",
-    answers: [
-      { text: "Microsoft", option: false },
-      { text: "Netscape", option: true },
-      { text: "Google", option: false },
-      { text: "Oracle", option: false },
-    ],
-  },
-];
+//   {
+//     question: "Which CSS property changes text color?",
+//     answers: [
+//       { text: "font-size", option: false },
+//       { text: "text-style", option: false },
+//       { text: "color", option: true },
+//       { text: "background", option: false },
+//     ],
+//   },
+//   {
+//     question: "Inside which HTML element do we put JavaScript?",
+//     answers: [
+//       { text: "<script>", option: true },
+//       { text: "<js>", option: false },
+//       { text: "<javascript>", option: false },
+//       { text: "<code>", option: false },
+//     ],
+//   },
+//   {
+//     question: "Which symbol is used for comments in JavaScript?",
+//     answers: [
+//       { text: "//", option: true },
+//       { text: "<!-- -->", option: true },
+//       { text: "#", option: true },
+//       { text: "/* */", option: true },
+//     ],
+//   },
+//   {
+//     question: "Which company developed JavaScript?",
+//     answers: [
+//       { text: "Microsoft", option: false },
+//       { text: "Netscape", option: true },
+//       { text: "Google", option: false },
+//       { text: "Oracle", option: false },
+//     ],
+//   },
+// ];
+
+import { quizData } from "./question.js";
+console.log(quizData)
 
 let curentqutionindex = 0;
 let score = 0;
@@ -54,13 +57,12 @@ const startscreen = document.querySelector("#start-screen");
 const startbtn = document.getElementById("start-button");
 const qutionsscreen = document.getElementById("quiz-screen");
 const questionElement = document.getElementById("question");
-// const scoreElement = document.getElementById("score");
-const restartbtn = document.getElementById("restart-btn");
+
+
 const info_question = document.getElementById("info-question");
 const total = document.getElementById("total-question");
 const answer_container = document.getElementById("answer-container");
 
-const resultElement = document.getElementById("result-screen");
 
 const nextbtn = document.getElementById("next-btn");
 
@@ -158,6 +160,8 @@ function showResult() {
 restartBtn.addEventListener("click", () => {
   // resultScreen.classList.remove("active");
   // startscreen.classList.add("active");
+  location.reload()
+
 });
 
 startbtn.addEventListener("click", startready);
