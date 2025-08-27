@@ -5,45 +5,77 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quiz</title>
     <link rel="stylesheet" href="style.css" />
+
   </head>
   <body>
-    <div class="contnier">
-      <div class="screen action" id="start-screen">
-        <h1>Quiz Time!</h1>
+    <div class="container">
+
+      <div class="screen active" id="start-screen">
+        <div style="text-align: center;">
+ <h1>Quiz Time!</h1>
         <p>Test your Programing Knowlage</p>
-        <button id="start-button">start Quiz</button>
+        <button id="start-button" >start Quiz</button>
+        </div>
+       
       </div>
 
-      <div class="screen" id="quiz-screen">
-        <div id="quiz-header">
-          <h2>qutions write this</h2>
-          <div id="quiz-info">
-            <p>Qutions<span>2</span>of<span>5</span></p>
-            <p>Score:<span>0</span></p>
-          </div>
+
+
+      
+
+     <div class="screen" id="quiz-screen">
+  <div id="quiz-header">
+    <h2 id="question"></h2>
+
+    <div class="info-result">
+      <p>Question <span id="info-question">1</span> of <span id="total-question">5</span></p>
+      <p>Score: <span  id="">0</span></p>
+    </div>
+  </div>
+           
+
+
+        
+       
+        <div id="answer-container" class="answer-container">
+          <!-- answer dynamically  -->
+       
         </div>
-        <div id="answere-container" class="answere-container">
-          <p id="ans">option1</p>
-          <p>option2</p>
-          <p>option3</p>
-          <p>option4</p>
-        </div>
+
+        
 
         <div class="progress-bar">
           <div id="progress" class="progress"></div>
         </div>
+
+  <button id="next-btn" class="btn">Next</button>
+
+
       </div>
 
-      <div class="result-screen" id="result-screen">
+
+
+       
+
+      <div class="screen" id="result-screen">
         <h1>Quiz Result</h1>
         <div class="result-info">
-          <p cl>
-            You scored <span id="final-score">0</span>out of
+          <p>
+            You scored 
+            <span id="final-score"> 0  </span> out of
             <span id="max-score">5</span>
           </p>
+
+          <div id="result-message">Good job!</div>
           <p>Keep studying! You'|| get better</p>
+          <button id="restart">Restart</button>
         </div>
       </div>
     </div>
+    </div>
+
+
+    <script src="app.js"></script>
   </body>
+  
 </html>
